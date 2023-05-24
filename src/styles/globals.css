@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .theme-container {
+    @apply px-4 md:px-[15%];
+  }
+}
