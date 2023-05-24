@@ -58,7 +58,6 @@ const Navbar = (props: Props) => {
           </Link>
           <Link href="https://www.linkedin.com/in/zaw-tun-75bb52127/" />
           <AiOutlineLinkedin className="w-[17px] h-[17px] text-blue" />
-          <Link href="https://github.com/zawztun"></Link>
           <Link href="https://twitter.com">
             <BsTwitter className="w-[17px] h-[17px] text-white-600" />
           </Link>

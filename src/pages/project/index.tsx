@@ -10,7 +10,10 @@ import { urlForImage } from "../../../sanity/lib/image";
 const query = `*[_type=="projectPage"][0]{
   title,
   hero,
-  "projects":*[_type=="project"]
+  "projects":*[_type=="project"]{
+    ...,
+    "image":mainImage,
+  }
 }`;
 
 interface Props {
@@ -30,10 +33,10 @@ const ProjectPage = ({ hero, projects }: Props) => {
           />
           <div className="grid-cols-2 gap-4 py-16 md:grid theme-container">
             {projects.map((li) => (
-              <div key={li._key} className="flex p-4 bg-theme_pj">
+              <div key={li._id} className="flex p-4 bg-theme_pj">
                 <div className="flex flex-col gap-4 md:min-w-[300px] md:min-h-[300px] ">
                   <Image
-                    src={urlForImage(li.image).width(1200).url()}
+                    src={urlForImage(li?.image).width(1200)?.url()}
                     alt=""
                     width={500}
                     height={350}
