@@ -12,8 +12,8 @@ export interface Hero {
 }
 
 export interface HeroCommon {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   image: SanityAsset;
 }
 
@@ -21,11 +21,25 @@ export interface Activity {
   title: string;
   link: Link;
   _key: string;
-  _type: "activity";
+  _type?: "activity";
   description: string;
   image: SanityAsset;
 }
 
+export interface Card {
+  title: string;
+  _key: string;
+  description: string;
+  image: SanityAsset;
+}
+
+export interface PostDetails {
+  title: string;
+  id: string;
+  type: "project";
+  image: SanityAsset;
+  body: string[];
+}
 export interface Project {
   title: string;
   link: Link;
@@ -45,8 +59,13 @@ export interface Projects {
 export interface Activities {
   title: string;
   _key: string;
-  _type: "activities";
+  _type?: "activities";
   activities: Activity[];
+}
+export interface Cards {
+  title: string;
+  _key: string;
+  activities: Card[];
 }
 export interface About {
   title: string;

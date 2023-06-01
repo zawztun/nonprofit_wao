@@ -13,7 +13,7 @@ const Activities = ({ activities }: Activities) => {
             return (
               <div
                 key={act._key}
-                className="flex flex-col bg-theme_light_blue justify-center px-8 gap-4 min-h-[300px]"
+                className="flex flex-col bg-theme_light_blue justify-center px-8 gap-4 min-h-[300px] min-w-[33%]"
               >
                 <h2 className="text-3xl font-semibold">{act.title}</h2>
                 <p>{act.description}</p>
@@ -26,7 +26,7 @@ const Activities = ({ activities }: Activities) => {
             return (
               <div
                 key={act._key}
-                className="flex flex-col bg-theme_grar_dark text-white justify-center px-8 gap-4 min-h-[300px]"
+                className="flex flex-col bg-theme_grar_dark text-white justify-center px-8 gap-4 min-h-[300px] min-w-[33%]"
               >
                 <h2 className="text-3xl font-semibold">{act.title}</h2>
                 <p>{act.description}</p>
